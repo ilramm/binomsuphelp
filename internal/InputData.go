@@ -7,19 +7,19 @@ import (
 	"strings"
 )
 
-func InputData() (string, string, string) {
+func InputData() (server, username, password string) {
 	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Print("Enter server IP (e.g., 192.168.1.1:22): ")
-	server, _ := reader.ReadString('\n')
+	server, _ = reader.ReadString('\n')
 	server = strings.TrimSpace(server)
 
 	fmt.Print("Enter username: ")
-	username, _ := reader.ReadString('\n')
+	username, _ = reader.ReadString('\n')
 	username = strings.TrimSpace(username)
 
 	fmt.Print("Enter password: ")
-	password, _ := reader.ReadString('\n')
+	password, _ = reader.ReadString('\n')
 	password = strings.TrimSpace(password)
 
 	return server, username, password
